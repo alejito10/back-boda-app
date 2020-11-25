@@ -4,11 +4,10 @@ const UserSchema = new mongoose.Schema(
     {
         _id: mongoose.Schema.Types.ObjectId,  //no hace falta
         name:{type: String,required: true},
-        surname:{type:String,required:true},
         email:{type:String,unique:true,required:true},
-        password:{type:String,required:true},
-        birthdate:{type:Date},
-        productos:{type:Array}
+        autobus:{type:String, required:true},
+        vegano:{type:String, required:true},
+        alergias:{type:String}
     },
     {timestamps: true}
 );
