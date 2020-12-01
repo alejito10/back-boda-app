@@ -9,9 +9,11 @@ const cookieSession = require('cookie-session');
 const path = require('path');
 require('dotenv').config();
 const mongoMiddlewares = require('./middlewares/mongo');
+const cors = require('cors');
 
 //objeto app
 var app = express();
+app.use(cors());
 
 //Rutas cargadas
 const userRoutes = require('./routes/users');
